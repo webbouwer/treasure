@@ -1,0 +1,33 @@
+/*
+ * content.css (loopcontainer etc.)
+ */
+
+#loopcontainer .post-artifact
+{
+  max-width:680px;
+}
+
+#loopcontainer .post-artifact img.wp-post-image
+{
+  width:100%;
+  height:auto;
+}
+
+
+/* overview */
+#loopcontainer .post-artifact.panorama
+{
+  max-width:1096px;
+}
+#loopcontainer .post-artifact.landscape
+{
+  max-width:403px;
+}
+#loopcontainer .post-artifact.portrait
+{
+  max-width:268px;
+}
+#loopcontainer .post-artifact.square
+{
+  max-width:268px;
+}

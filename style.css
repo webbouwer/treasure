@@ -1,0 +1,107 @@
+/*
+Theme Name: Treasure
+Theme URI: https://github.com/webbouwer/treasure
+Author: Webbouwer
+Author URI: http://www.webdesigndenhaag.net
+Description: A multi purpose theme
+Version: 0.0.1
+Tested up to: 5.8
+Requires PHP: 7.3
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: accessibility-ready
+Text Domain: treasure
+*/
+
+
+@import "css/header.css";
+@import "css/content.css";
+@import "css/footer.css";
+
+/* Global default styles */
+
+*
+{
+margin:0;
+padding:0;
+}
+
+html,
+body
+{
+position:relative;
+height:100vh;
+width:100%;
+}
+
+body {
+
+}
+
+#viewcontainer
+{
+	min-height:100vh;
+	width:100%;
+}
+
+#header
+{
+}
+
+#footer
+{
+}
+
+.outermargin
+{
+	max-width:1400px;
+	width:96%;
+	margin:0px auto;
+}
+
+/* Theme Default Styles */
+#logobox h1,
+#logobox h2
+{
+	font-size:90%;
+}
+
+/* variable (style.css) */
+#logobox .innerpadding,
+#loopcontainer .innerpadding,
+.widget .innerpadding,
+.column .innerpadding,
+nav ul > li > a,
+#site-titlebox .innerpadding
+{
+	padding:0px 5px;
+}
+
+.clr
+{
+clear:both;
+height:0;
+line-height:0;
+}
+
+/* WP Default Styles */
+
+.screen-reader-text
+{
+}
+.alignright
+{}
+.alignleft
+{}
+.aligncenter
+{}
+.bypostauthor
+{}
+.wp-caption
+{}
+.wp-caption-text
+{}
+.gallery-caption
+{}
+.sticky
+{}
