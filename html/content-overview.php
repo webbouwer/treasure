@@ -4,8 +4,8 @@
  * Theme custom taxonomy and post file
  */
 
-$collection_slug = 'example-top-collection';//get_queried_object()->slug;
-$collection_name = 'Example collectie';//get_queried_object()->name;
+$collection_slug = 'chateau-du-lac';//get_queried_object()->slug;
+$collection_name = 'Chateau du Lac';//get_queried_object()->name;
 
 echo '<div id="postcontent"><div class="outermargin">';
 
@@ -13,7 +13,12 @@ echo '<div id="postcontent"><div class="outermargin">';
 echo '<div id="loopcontainer">';
 
 
-echo '<div id="pagetitlebox" class="innerpadding"><h2>'.$collection_name.'</h2></div>';
+//echo '<div id="pagetitlebox" class="innerpadding"><h2>'.$collection_name.'</h2></div>';
+/*
+echo '<div class="post-artifact landscape"><div class="innerpadding">';
+echo '<img class="wp-post-image" src="https://webdesigndenhaag.net/lab/project/treasure/wp-content/uploads/2021/07/dehoekseschatkist_logo_rgb.jpg" />';
+echo '</div></div>';
+*/
 
 $get_post_args = array(
   'post_type' => 'artifact', // Your Post type Name that You Registered
