@@ -34,6 +34,7 @@ $collection_posts = new WP_Query($get_post_args);
 
 if($collection_posts->have_posts()) :
 
+
   // media type taxonmies for each post artifact id
   //$artifact_media_types = array();
 
@@ -69,6 +70,14 @@ if($collection_posts->have_posts()) :
       echo '<div class="entry-excerpt">'.get_the_excerpt().'</div></div>';
 
     endwhile;
+
+
+        /*
+        // Get the current post type
+        $postType = get_post_type();
+        echo '<hr /><a href="' . get_post_type_archive_link($postType) . '">Visit the '.$postType.' archive</a>';
+        */
+
 endif;
 
 wp_link_pages();
