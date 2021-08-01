@@ -1,8 +1,7 @@
 jQuery(function($) {
+
+
   $(window).ready(function(){
-
-
-
     /*var logobox = $('<div class="post-artifact logobox"><div class="innerpadding">'
     +'<img class="wp-post-image" src="https://webdesigndenhaag.net/lab/project/treasure/wp-content/uploads/2021/07/dehoekseschatkist_logo_rgb.jpg" />'
     + '</div></div>');
@@ -12,13 +11,14 @@ jQuery(function($) {
     gutterWidth = 0,
     colWidth = container.width() / 5,
     currCat = '',
-    filters = '*';
+    filters = '';
 
     // external js: isotope.pkgd.min.js
     //container.prepend(logobox);
 
     container.isotope({
       itemSelector: '.post-artifact',
+
       animationEngine: 'best-available',
       transitionDuration: '0.9s',
       masonry: {
@@ -26,6 +26,7 @@ jQuery(function($) {
           columnWidth: colWidth,
           gutter: gutterWidth,
       },
+
     });
 
 
@@ -52,19 +53,17 @@ jQuery(function($) {
           columnWidth: colWidth,
           gutter: gutterWidth,
         }
-      }).isotope({ filter: filters }).isotope( 'layout' );
+      });
 
     }
 
+    setTimeout(doneResizing, 80);
 
-    doneResizing();
-
-    $('#typemenu ul').on('click', 'li', function(){
-      //alert( $(this).data('type') );
-      filters = '.'+$(this).data('type');
-      container.isotope({ filter: filters }).isotope( 'layout' );
-    });
-
+      $('#typemenu ul').on('click', 'li', function(){
+        //alert( $(this).data('type') );
+        filters = '.'+$(this).data('type');
+        container.isotope({ filter: filters }).isotope( 'layout' );
+      });
 
   });
 
