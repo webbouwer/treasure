@@ -1,4 +1,199 @@
 
+/* typemenu */
+#typemenu
+{
+  height:120px;
+  padding-top:40px;
+}
+#typemenu ul
+{
+  text-align: right;
+  padding:0px 0px; /* innerpadding */
+}
+#typemenu ul li
+{
+  display:inline-block;
+  padding:5px;
+  list-style-type: none;
+}
+#typemenu ul li.notavailable
+{
+  opacity:0.2;
+}
+li#menubutton
+{
+  margin-right:3px;
+}
+
+
+
+.icon-button
+{
+    position: relative;
+    width:64px;
+    height:64px;
+}
+.icon-button span
+{
+  display:none;
+}
+.icon-button:hover span
+{
+  position:absolute;
+  display:block;
+  left:0px;
+  bottom:-20px;
+  width:100%;
+  text-align:center;
+}
+
+
+.but-foto
+{
+  background-image:url('../media/icons/menu_icon_grey_foto.png');
+}
+.but-foto.selected,
+.but-foto.selected:hover
+{
+  background-image:url('../media/icons/menu_icon_red_foto.png');
+}
+.but-foto:hover
+{
+  background-image:url('../media/icons/menu_icon_blue_foto.png');
+}
+.but-gedicht
+{
+  background-image:url('../media/icons/menu_icon_grey_gedicht.png');
+}
+.but-gedicht.selected,
+.but-gedicht.selected:hover
+{
+  background-image:url('../media/icons/menu_icon_red_gedicht.png');
+}
+.but-gedicht:hover
+{
+  background-image:url('../media/icons/menu_icon_blue_gedicht.png');
+}
+.but-sculptuur
+{
+  background-image:url('../media/icons/menu_icon_grey_sculptuur.png');
+}
+.but-sculptuur.selected,
+.but-sculptuur.selected:hover
+{
+  background-image:url('../media/icons/menu_icon_red_sculptuur.png');
+}
+.but-sculptuur:hover
+{
+  background-image:url('../media/icons/menu_icon_blue_sculptuur.png');
+}
+.but-schilderij
+{
+  background-image:url('../media/icons/menu_icon_grey_schilderij.png');
+}
+.but-schilderij.selected,
+.but-schilderij.selected:hover
+{
+  background-image:url('../media/icons/menu_icon_red_schilderij.png');
+}
+.but-schilderij:hover
+{
+  background-image:url('../media/icons/menu_icon_blue_schilderij.png');
+}
+.but-verhaal
+{
+  background-image:url('../media/icons/menu_icon_grey_geschrift.png');
+}
+.but-verhaal.selected,
+.but-verhaal.selected:hover
+{
+  background-image:url('../media/icons/menu_icon_red_geschrift.png');
+}
+.but-verhaal:hover
+{
+  background-image:url('../media/icons/menu_icon_blue_geschrift.png');
+}
+.but-video
+{
+  background-image:url('../media/icons/menu_icon_grey_video.png');
+}
+.but-video.selected,
+.but-video.selected:hover
+{
+  background-image:url('../media/icons/menu_icon_red_video.png');
+}
+.but-video:hover
+{
+  background-image:url('../media/icons/menu_icon_blue_video.png');
+}
+.but-audio
+{
+  background-image:url('../media/icons/menu_icon_grey_audio.png');
+}
+.but-audio.selected,
+.but-audio.selected:hover
+{
+  background-image:url('../media/icons/menu_icon_red_audio.png');
+}
+.but-audio:hover
+{
+  background-image:url('../media/icons/menu_icon_blue_audio.png');
+}
+.but-overige
+{
+  background-image:url('../media/icons/menu_icon_grey_overig.png');
+}
+.but-overige.selected,
+.but-overige.selected:hover
+{
+  background-image:url('../media/icons/menu_icon_red_overig.png');
+}
+.but-overige:hover
+{
+  background-image:url('../media/icons/menu_icon_blue_overig.png');
+}
+.but-menu
+{
+  background-image:url('../media/icons/menu_closed.png');
+}
+.but-menu:hover
+{
+  background-image:url('../media/icons/menu_closed_blue.png');
+}
+.but-menu.active
+{
+  background-image:url('../media/icons/menu_open.png');
+}
+.but-menu.active:hover
+{
+  background-image:url('../media/icons/menu_open_blue.png');
+}
+
+.item-icons
+{
+  min-height:80px;
+}
+.item-icons ul li
+{
+  display:inline-block;
+  padding:5px;
+  list-style-type: none;
+  background-size:cover;
+  width:56px;
+  height:56px;
+  filter: brightness(0) invert(1);
+}
+.item-icons ul li:hover,
+.item-icons ul li.selected
+{
+  filter:  none;
+}
+
+#navmenu
+{
+  display:none;
+}
+
 /* ---- .grid-item ---- */
 
 

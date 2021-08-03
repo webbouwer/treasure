@@ -1,7 +1,6 @@
 <?php
 /**
- * Template Name: Overview Page
- * Theme custom taxonomy and post file
+ * frontpage 
  */
 
  echo '<!DOCTYPE HTML>';
@@ -27,7 +26,7 @@ wp_body_open();
 
 echo '<div id="viewcontainer overviewpage">';
 
-//get_template_part('html/header');
+get_template_part('html/header');
 
 get_template_part('html/content-overview');
 
