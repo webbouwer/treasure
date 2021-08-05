@@ -15,7 +15,7 @@
  wp_enqueue_script("jquery"); // default wp jquery
  wp_enqueue_script( 'isotope', get_template_directory_uri().'/js/isotope.pkgd.min.js', array( 'jquery' ), '', true );
  wp_enqueue_script( 'imagesloaded', get_template_directory_uri().'/js/imagesloaded.js', array( 'jquery' ), '', true );
- wp_enqueue_script( 'overview-jscode', get_template_directory_uri().'/js/overview.js', array( 'jquery' ), '', true );
+ // localized in functions.php .. wp_enqueue_script( 'overview-jscode', get_template_directory_uri().'/js/overview.js', array( 'jquery' ), '', true );
  wp_enqueue_style( 'overview-style', get_template_directory_uri().'/css/overview.css' );
  wp_head();
 
@@ -25,13 +25,13 @@ echo '<body '; body_class(); echo '>';
 
 wp_body_open();
 
-echo '<div id="viewcontainer overviewpage">';
+echo '<div id="viewcontainer">';
 
 //get_template_part('html/header');
 
 get_template_part('html/content-overview');
 
-get_template_part('html/footer');
+// get_template_part('html/footer');
 
 echo '</div>';
 

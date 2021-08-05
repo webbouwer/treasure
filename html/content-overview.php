@@ -21,6 +21,10 @@ echo '</div>'; // end loopcontainer
 echo '</div></div>'; // end postcontent
 */
 
+
+
+
+
 $typeparent =get_terms( 'types', array('hide_empty' => 0, 'parent' => 4 ));
 $types = array();
 foreach ($typeparent as $child) {
@@ -133,7 +137,7 @@ if($collection_posts->have_posts()) :
         $thumb_orientation = 'portrait';
       }
 
-      echo '<div class="post-artifact '.$thumb_orientation.' '.$classes.'"><div class="innerpadding">';
+      echo '<div class="post-artifact '.$thumb_orientation.' '.$classes.'" data-id="'.$artID .'"><div class="innerpadding">';
 
       if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 

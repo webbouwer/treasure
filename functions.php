@@ -47,6 +47,7 @@ function theme_setup_register_menus() {
      // add jquery
      wp_enqueue_script("jquery"); // default wp jquery
      wp_register_script( 'global_js', get_template_directory_uri().'/js/functions.js', 99, '1.0', false); // register the script
+		 wp_register_script( 'global_js', get_template_directory_uri().'/js/functions.js', 99, '1.0', false); // register the script
      /*
 		 global $wp_global_data; // get global data var
  		 wp_localize_script( 'global_js', 'site_data', $wp_global_data ); // localize the global data list for the script
@@ -58,6 +59,68 @@ function theme_setup_register_menus() {
      wp_enqueue_script( 'global_js');
  }
  add_action('wp_enqueue_scripts', 'wp_main_theme_global_js');
+
+
+
+
+
+
+ // We add the action twice, once for logged in users and once for non logged in users.
+ add_action( 'wp_ajax_artifact_view', 'artifact_view_callback' );
+ add_action( 'wp_ajax_nopriv_artifact_view', 'artifact_view_callback' );
+
+ // Enqueue the script on the front end.
+ add_action( 'wp_enqueue_scripts', 'enqueue_artifact_view_script' );
+ // Enqueue the script on the back end (wp-admin)
+ add_action( 'admin_enqueue_scripts', 'enqueue_artifact_view_script' );
+
+ function artifact_view_callback() {
+     $json = array();
+
+     if ( isset( $_REQUEST['id'] ) ) {
+			 	$id = $_REQUEST['id'];
+			 	$post = get_post( $id );
+				//$json['postdata'] = $post;
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id($id), '');
+				$json['postdata'] = array(
+					'title'=>$post->post_title,
+					'excerpt'=>$post->post_excerpt,
+					'content'=>$post->post_content,
+					'image'=>$image[0],
+					'link'=>$post->guid,
+				);
+				// list in array per type
+				$json['postmedia'] = array();
+				$media = get_attached_media( '', $id );
+				foreach($media as $element) {
+					$terms = wp_get_post_terms( $element->ID, array( 'types' ) );
+					$json['postmedia'][$element->ID] = array(
+						'title'=>$element->post_title,
+						'excerpt'=>$element->post_excerpt,
+						'src'=>$element->guid,
+						'type_parent'=> $terms[0]->parent,
+						'type_slug'=> $terms[0]->slug,
+						'type_name'=> $terms[0]->name,
+					);
+				}
+				//$json['postmedia'] = json_encode( $media );
+
+
+        wp_send_json_success( $json );
+     }
+ }
+
+ function enqueue_artifact_view_script() {
+     wp_enqueue_script( 'artifact-view', get_template_directory_uri().'/js/overview.js', array( 'jquery' ), null, true );
+     wp_localize_script( 'artifact-view', 'artifact_view_data', array(
+         'ajaxurl' => admin_url( 'admin-ajax.php' ),
+     ) );
+ }
+
+
+
+
+
 
 
  // register style sheet

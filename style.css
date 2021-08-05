@@ -13,10 +13,67 @@ Tags: accessibility-ready
 Text Domain: treasure
 */
 
+/*
+red pink : #FF004D
+blue light : #00A3E8
+grey light : #ADB4BE
+*/
+
 
 @import "css/header.css";
 @import "css/content.css";
 @import "css/footer.css";
+
+/* fonts used */
+@font-face {
+    font-family: 'Archery';
+    src: url("fonts/archery/archery_black_rounded_regular.eot");
+	src: url('fonts/archery/archery_black_rounded_regular.eot?#iefix') format('embedded-opentype'),
+        /* url('fonts/archery/archery_black_rounded_regular.woff') format('woff'), */
+         url('fonts/archery/archery_black_rounded_regular.ttf') format('truetype');
+    	 /*url('fonts/archery/archery_black_rounded_regular.otf') format('opentype'),
+         url('fonts/archery/archery_black_rounded_regular.svg') format('svg'); */
+}
+
+@font-face {
+    font-family: 'Montserrat-regular';
+    src: url("fonts/montserrat/Montserrat-Regular.eot");
+	src: url('fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+         /*url('fonts/montserrat/Montserrat-Regular.woff') format('woff'),*/
+         url('fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+    	 /*url('fonts/montserrat/Montserrat-Regular.otf') format('opentype'),
+         url('fonts/montserrat/Montserrat-Regular.svg') format('svg');*/
+}
+@font-face {
+    font-family: 'Montserrat-semibold';
+    src: url("fonts/montserrat/Montserrat-SemiBold.eot");
+	src: url('fonts/montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        /* url('fonts/montserrat/Montserrat-SemiBold.woff') format('woff'),*/
+         url('fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    /*	 url('fonts/montserrat/Montserrat-SemiBold.otf') format('opentype'),
+         url('fonts/montserrat/Montserrat-SemiBold.svg') format('svg'); */
+}
+
+
+
+.Archeryfont
+{
+			font-family: "Archery", Arial, Helvetica, sans-serif;
+}
+
+.Montserrat
+{
+			font-family: "Montserrat-regular", Arial, Helvetica, sans-serif;
+}
+
+H1,H2,
+.innerpadding,
+.MontserratSB,
+.text
+{
+			font-family: "Montserrat-semibold", Arial, Helvetica, sans-serif;
+}
+
 
 /* Global default styles */
 
@@ -31,17 +88,14 @@ html,
 body
 {
 position:relative;
-height:100vh;
+height:100%;
 width:100%;
 }
 
-body {
-
-}
 
 #viewcontainer
 {
-	min-height:100vh;
+	min-height:100%;
 	width:100%;
 }
 
