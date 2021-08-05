@@ -1,6 +1,6 @@
 <?php
 /* treasure
- * frontpage.php
+ * page.php
  * default theme file
  */
 

@@ -1,10 +1,8 @@
 <?php
-/* Protago
+/* treasure
  * index.php
  * default theme file
  */
-
-// $options = get_option( 'protago_settings' );
 
 get_template_part('html/htmlhead');
 
