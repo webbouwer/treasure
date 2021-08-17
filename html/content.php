@@ -1,8 +1,5 @@
 <?php
 
-
-echo '<div id="postcontent"><div class="outermargin">';
-
 echo '<div id="loopcontainer">';
 
 if ( have_posts() ) :
@@ -52,11 +49,12 @@ if ( have_posts() ) :
 
 endif;
 
-echo '</div>'; // end loopcontainer
-
 wp_link_pages();
 
 wp_reset_query();
+
+echo '</div>'; // end loopcontainer
+
 
 
 // sidebar
@@ -80,5 +78,3 @@ if( function_exists('is_sidebar_active') && is_sidebar_active('sidebar') ){
 echo '</div></div>';
 
 }
-
-echo '</div></div>'; // end postcontent
