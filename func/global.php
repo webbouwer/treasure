@@ -18,9 +18,9 @@ function theme_setup_register_menus() {
   register_nav_menus(
     array(
       'topmenu' => __( 'Top menu' , 'treasure' ),
-      'mainmenu' => __( 'Main menu' , 'treasure' ),
+      'primary' => __( 'Primary (main) menu' , 'treasure' ),
       'sidemenu' => __( 'Side menu' , 'treasure' ),
-      'footermenu' => __( 'Footer menu' , 'treasure' )
+      'footer' => __( 'Footer (secondary) menu' , 'treasure' )
     )
   );
 }
