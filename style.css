@@ -13,7 +13,66 @@ Tags: accessibility-ready
 Text Domain: treasure
 */
 
-/* @import "css/more.css"; */
+@import "assets/css/navigation.css";
+
+/* fonts used */
+@font-face {
+    font-family: 'Archery';
+    src: url("lib/media/fonts/archery/archery_black_rounded_regular.eot");
+	src: url('lib/media/fonts/archery/archery_black_rounded_regular.eot?#iefix') format('embedded-opentype'),
+        /* url('fonts/archery/archery_black_rounded_regular.woff') format('woff'), */
+         url('lib/media/fonts/archery/archery_black_rounded_regular.ttf') format('truetype');
+    	 /*url('fonts/archery/archery_black_rounded_regular.otf') format('opentype'),
+         url('fonts/archery/archery_black_rounded_regular.svg') format('svg'); */
+}
+
+@font-face {
+    font-family: 'Montserrat-regular';
+    src: url("lib/media/fonts/montserrat/Montserrat-Regular.eot");
+	src: url('lib/media/fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+         /*url('fonts/montserrat/Montserrat-Regular.woff') format('woff'),*/
+         url('lib/media/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+    	 /*url('fonts/montserrat/Montserrat-Regular.otf') format('opentype'),
+         url('fonts/montserrat/Montserrat-Regular.svg') format('svg');*/
+}
+@font-face {
+    font-family: 'Montserrat-semibold';
+    src: url("lib/media/fonts/montserrat/Montserrat-SemiBold.eot");
+	src: url('lib/media/fonts/montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        /* url('fonts/montserrat/Montserrat-SemiBold.woff') format('woff'),*/
+         url('lib/media/fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    /*	 url('fonts/montserrat/Montserrat-SemiBold.otf') format('opentype'),
+         url('fonts/montserrat/Montserrat-SemiBold.svg') format('svg'); */
+}
+
+
+
+.Archeryfont
+{
+			font-family: "Archery", Arial, Helvetica, sans-serif;
+}
+
+
+/* menu */
+#primarymenu .innerpadding ul li
+{
+			font-family: "Archery", Arial, Helvetica, sans-serif;
+}
+
+.Montserrat
+{
+			font-family: "Montserrat-regular", Arial, Helvetica, sans-serif;
+}
+
+H1,H2,
+.innerpadding,
+.MontserratSB,
+.text
+{
+			font-family: "Montserrat-semibold", Arial, Helvetica, sans-serif;
+}
+
+,
 
 /* Global default styles */
 *
@@ -46,13 +105,16 @@ width:100%;
 {
 }
 
+#loopcontainer
+{
+}
+
 .content-area,
 .outermargin
 {
 	max-width:1400px;
 	width:96%;
 	margin:0px auto;
-	background-color:blue;
 }
 
 /* Theme Default Styles */
@@ -64,9 +126,10 @@ width:100%;
 
 a.site-logo > img
 {
-	max-width:480px;
+	max-width:360px;
 	height:auto;
 }
+
 
 /* variable (style.css) */
 #logobox .innerpadding,
@@ -77,7 +140,6 @@ nav ul > li > a,
 #site-titlebox .innerpadding
 {
 	padding:0px 15px;
-	background-color:red;
 }
 
 .clr

@@ -1,4 +1,5 @@
 <?php
+/*
 //Localize the AJAX URL and Nonce
 add_action('wp_enqueue_scripts', 'example_localize_ajax');
 function example_localize_ajax(){
@@ -12,6 +13,7 @@ function example_localize_ajax(){
 add_action( 'wp_enqueue_scripts', 'enqueue_ajax_script' );
 // Enqueue the script on the back end (wp-admin)
 add_action( 'admin_enqueue_scripts', 'enqueue_ajax_script' );
+
 function enqueue_ajax_script() {
     wp_enqueue_script( 'ajax-script', get_template_directory_uri().'/assets/js/ajaxrequests.js', array( 'jquery' ), null, true );
     wp_localize_script( 'ajax-script', 'ajax_data', array(
@@ -19,7 +21,7 @@ function enqueue_ajax_script() {
     ) );
 }
 
-
+*/
 
 
 /* Example AJAX Function
