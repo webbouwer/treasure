@@ -1,4 +1,10 @@
 <?php
+
+function enqueue_custom_script() {
+    wp_enqueue_script( 'custom-script', get_template_directory_uri().'/assets/js/custom.js', array( 'jquery' ), null, true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_custom_script' ); 
+
 /*
 //Localize the AJAX URL and Nonce
 add_action('wp_enqueue_scripts', 'example_localize_ajax');

@@ -13,7 +13,7 @@ Tags: accessibility-ready
 Text Domain: treasure
 */
 
-@import "assets/css/navigation.css";
+@import "assets/css/custom.css";
 
 /* fonts used */
 @font-face {
@@ -71,8 +71,6 @@ H1,H2,
 {
 			font-family: "Montserrat-semibold", Arial, Helvetica, sans-serif;
 }
-
-,
 
 /* Global default styles */
 *
@@ -147,6 +145,27 @@ nav ul > li > a,
 clear:both;
 height:0;
 line-height:0;
+}
+
+/**/
+#mainbar .outermargin
+{
+  display:flex;
+  flex-direction: row;
+}
+.site-logo,
+.primary-navigation
+{
+  flex:1;
+}
+.primary-navigation nav
+{
+  text-align:right;
+}
+.primary-navigation nav ul li{
+  display:inline-block;
+  list-style:none;
+  padding:0;
 }
 
 /* WP Default Styles */

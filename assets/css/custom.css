@@ -1,6 +1,30 @@
-/* icon buttons overall */
+/* primary menu */
+.primary-navigation nav
+{
+  text-align:center !important;
 
-/**/
+}
+.primary-navigation nav ul li{
+  display:block !important;
+  width:200px;
+  margin:0px auto;
+}
+.primary-navigation nav ul li a {
+  display:block;
+  text-align:left;
+}
+
+
+/* collections overview typemenu */
+#typemenu
+{
+  height:120px;
+  padding-top:40px;
+}
+
+
+
+/* icon buttons overall
 .icon-button
 {
     position: relative;
@@ -187,49 +211,27 @@
 {
   filter:  none;
 }
+*/
 
 
 
 
 
-#viewcontainer
-{
-  -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-        box-sizing: border-box;
-}
-#overlaycontainer,
-#infoboxcontainer
+
+/*
+.closeoverlay,
+.closeinfobox
 {
   position:absolute;
-  width:100%;
+  right:0px;
   top:0px;
-  left:0px;
-  background: rgba(255, 255, 255, 1);
-  min-height:100vh;
-  z-index:99;
-}
-#overlaycontainer .outermargin
-{
-  max-width:960px;
-  height:100%;
-}
-#overlaycontainer.intro
-{
-  background: rgba(255, 255, 255, 0.70);
+  height:64px;
+  width:64px;
+  background-image:url('../../lib/media/icons/menu_open.png');
+  z-index:999;
 }
 
-#overlaycontainer .popcontainer .mediabox
-{
-  text-align:center;
-}
-#overlaycontainer .popcontainer .mediabox img
-{
-  height:auto;
-  max-height:80vh;
-  width:auto;
-  max-width:100%;
-}
+
 #overlaycontainer .popcontainer .contentbox
 {
   display: flex;
@@ -243,15 +245,4 @@
   min-height:240px;
   background-color:#ADB4BE;
 }
-
-.closeoverlay,
-.closeinfobox
-{
-  position:absolute;
-  right:0px;
-  top:0px;
-  height:64px;
-  width:64px;
-  background-image:url('../../lib/media/icons/menu_open.png');
-  z-index:999;
-}
+*/
