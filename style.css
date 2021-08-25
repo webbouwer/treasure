@@ -13,6 +13,7 @@ Tags: accessibility-ready
 Text Domain: treasure
 */
 
+
 @import "assets/css/custom.css";
 
 /* fonts used */
@@ -45,16 +46,7 @@ Text Domain: treasure
          url('fonts/montserrat/Montserrat-SemiBold.svg') format('svg'); */
 }
 
-
-
 .Archeryfont
-{
-			font-family: "Archery", Arial, Helvetica, sans-serif;
-}
-
-
-/* menu */
-#primarymenu .innerpadding ul li
 {
 			font-family: "Archery", Arial, Helvetica, sans-serif;
 }
@@ -63,6 +55,7 @@ Text Domain: treasure
 {
 			font-family: "Montserrat-regular", Arial, Helvetica, sans-serif;
 }
+
 
 H1,H2,
 .innerpadding,

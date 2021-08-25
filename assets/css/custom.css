@@ -1,30 +1,46 @@
+
+/*
+rood roze : #FF004D
+grijs donker : #ADB4BE
+*/
+
 /* primary menu */
 .primary-navigation nav
 {
   text-align:center !important;
-
+  margin-top: 54px;
 }
 .primary-navigation nav ul li{
   display:block !important;
   width:200px;
   margin:0px auto;
+  letter-spacing:0.1em;
+  font-family: "Archery", Arial, Helvetica, sans-serif;
 }
 .primary-navigation nav ul li a {
   display:block;
   text-align:left;
+  padding:3px 5px;
+  font-size:1.6em;
+  color: #ADB4BE;
+  text-decoration:none;
 }
-
+.primary-navigation nav ul li a:hover,
+.primary-navigation nav ul li.current_page_item a
+{
+  color: #FF004D;
+}
 
 /* collections overview typemenu */
 #typemenu
 {
   height:120px;
-  padding-top:40px;
+  padding-top:80px;
 }
 
 
 
-/* icon buttons overall
+/* icon buttons overall */
 .icon-button
 {
     position: relative;
@@ -34,8 +50,6 @@
     background-position: center;
 
 }
-
-
 .icon-button span
 {
   display:none;
@@ -52,8 +66,121 @@
   color:#00A3E8;
   font-size: 17px;
   letter-spacing:0.1em;
+}
+#typemenu .icon-button:hover{
+  background-color:#ADB4BE;
+}
+/* typemenu icon buttons */
+.but-foto
+{
+  background-image:url('../../lib/media/icons/menu_icon_grey_foto.png');
+}
+.but-audio
+{
+  background-image:url('../../lib/media/icons/menu_icon_grey_audio.png');
+}
+.but-gedicht
+{
+  background-image:url('../../lib/media/icons/menu_icon_grey_gedicht.png');
+}
+.but-sculptuur
+{
+  background-image:url('../../lib/media/icons/menu_icon_grey_sculptuur.png');
+}
+.but-video
+{
+  background-image:url('../../lib/media/icons/menu_icon_grey_video.png');
+}
+.but-schilderij
+{
+  background-image:url('../../lib/media/icons/menu_icon_grey_schilderij.png');
+}
+.but-verhaal
+{
+  background-image:url('../../lib/media/icons/menu_icon_grey_geschrift.png');
+}
+.but-overige
+{
+  background-image:url('../../lib/media/icons/menu_icon_grey_overig.png');
+}
+
+/* items grid */
+#loopcontainer.grid-view .post-artifact
+{
+  -webkit-box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.56);
+  box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.56);
+}
+#loopcontainer.grid-view .post-artifact img
+{
+  transition: transform .5s ease;
+}
+#loopcontainer.grid-view .post-artifact.hover img
+{
+  transform: scale(1.5) !important; /* (150% zoom) */
+}
+
+/* item icon buttons */
+#loopcontainer.grid-view .item-icons
+{
+  min-height:80px;
+}
+#loopcontainer.grid-view .item-icons ul
+{
+  padding:0 !important;
+}
+#loopcontainer.grid-view .item-icons ul li
+{
+  display:inline-block;
+  padding:5px;
+  list-style-type: none;
+  background-size:cover;
+  width:56px;
+  height:56px;
+  filter: brightness(0) invert(1);
+}
+#loopcontainer.grid-view .item-icons ul li:hover,
+#loopcontainer.grid-view .item-icons ul li.selected
+{
+  filter:  none;
+}
+
+
+
+
+#loopcontainer.list-view .post-artifact .overlay
+{
+}
+#loopcontainer.list-view .post-artifact .overlay .item-icons
+{
+  float:right;
+  width:30%;
+}
+#loopcontainer.list-view .post-artifact .overlay .item-excerpt
+{
+}
+
+#loopcontainer.list-view .item-icons ul
+{
+  padding:0 !important;
+}
+#loopcontainer.list-view .item-icons ul li
+{
+  display:inline-block;
+  padding:5px;
+  list-style-type: none;
+  background-size:cover;
+  width:46px;
+  height:46px;
+  filter:  none;
+}
+#loopcontainer.list-view .item-icons ul li:hover,
+#loopcontainer.list-view .item-icons ul li.selected
+{
 
 }
+
+
+/*
 .icon-button.selected span
 {
   color:#FF004D;
@@ -214,11 +341,44 @@
 */
 
 
+#display-toggle
+{
+  position:absolute;
+  top:9px;
+  right:8px;
+  z-index:99;
+}
+#display-toggle a
+{
+  width:64px;
+  height:64px;
+}
+.grid-view #display-toggle a.list
+{
+  display:block;
+  background-image:url('../../lib/media/icons/menu_icon_list_grey.png');
+}
+.list-view #display-toggle a.grid
+{
+  display:block;
+  background-image:url('../../lib/media/icons/menu_icon_grid_grey.png');
+}
+#display-toggle a span{
+  display:none;
+}
+
+.grid-view a.grid
+{
+  display:none;
+}
+.list-view a.list
+{
+  display:none;
+}
 
 
 
 
-/*
 .closeoverlay,
 .closeinfobox
 {
@@ -245,4 +405,3 @@
   min-height:240px;
   background-color:#ADB4BE;
 }
-*/
