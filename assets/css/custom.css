@@ -12,7 +12,7 @@ grijs donker : #ADB4BE
 }
 .primary-navigation nav ul li{
   display:block !important;
-  width:200px;
+  width:160px;
   margin:0px auto;
   letter-spacing:0.1em;
   font-family: "Archery", Arial, Helvetica, sans-serif;
@@ -38,7 +38,19 @@ grijs donker : #ADB4BE
   padding-top:80px;
 }
 
-
+.closeoverlay,
+.closeinfobox,
+.closeintrobox
+{
+  position:absolute;
+  right:0px;
+  top:0px;
+  height:64px;
+  width:64px;
+  z-index:90;
+  background-color: transparent;
+  background-image:url('../../lib/media/icons/menu_open.png');
+}
 
 /* icon buttons overall */
 .icon-button
@@ -63,14 +75,21 @@ grijs donker : #ADB4BE
   bottom:-20px;
   width:100%;
   text-align:center;
-  color:#00A3E8;
+  color:#ADB4BE;
   font-size: 17px;
   letter-spacing:0.1em;
 }
-#typemenu .icon-button:hover{
-  background-color:#ADB4BE;
+.icon-button.selected span,
+.icon-button.selected:hover span
+{
+  color:#FF004D;
 }
-/* typemenu icon buttons */
+
+#loopcontainer.grid-view .post-artifact .item-icons .icon-button span
+{
+  color: #ffffff;
+}
+/* base icon buttons */
 .but-foto
 {
   background-image:url('../../lib/media/icons/menu_icon_grey_foto.png');
@@ -102,6 +121,67 @@ grijs donker : #ADB4BE
 .but-overige
 {
   background-image:url('../../lib/media/icons/menu_icon_grey_overig.png');
+}
+
+/* typemenu icon buttons */
+#typemenu .icon-button:hover{
+  background-color:#ADB4BE;
+}
+
+#typemenu .icon-button.selected,
+#typemenu .icon-button.selected:hover{
+  background-color:#FF004D;
+}
+
+
+
+#typemenu .but-foto:hover,
+#typemenu .but-foto.selected,
+#loopcontainer.grid-view .post-artifact .item-icons .but-foto
+{
+  background-image:url('../../lib/media/icons/menu_icon_white_foto.png');
+}
+#typemenu .but-audio:hover,
+#typemenu .but-audio.selected,
+#loopcontainer.grid-view .post-artifact .item-icons .but-audio
+{
+  background-image:url('../../lib/media/icons/menu_icon_white_audio.png');
+}
+#typemenu .but-gedicht:hover,
+#typemenu .but-gedicht.selected,
+#loopcontainer.grid-view .post-artifact .item-icons .but-gedicht
+{
+  background-image:url('../../lib/media/icons/menu_icon_white_gedicht.png');
+}
+#typemenu .but-sculptuur:hover,
+#typemenu .but-sculptuur.selected,
+#loopcontainer.grid-view .post-artifact .item-icons .but-sculptuur
+{
+  background-image:url('../../lib/media/icons/menu_icon_white_sculptuur.png');
+}
+#typemenu .but-video:hover,
+#typemenu .but-video.selected,
+#loopcontainer.grid-view .post-artifact .item-icons .but-video
+{
+  background-image:url('../../lib/media/icons/menu_icon_white_video.png');
+}
+#typemenu .but-schilderij:hover,
+#typemenu .but-schilderij.selected,
+#loopcontainer.grid-view .post-artifact .item-icons .but-schilderij
+{
+  background-image:url('../../lib/media/icons/menu_icon_white_schilderij.png');
+}
+#typemenu .but-verhaal:hover,
+#typemenu .but-verhaal.selected,
+#loopcontainer.grid-view .post-artifact .item-icons .but-verhaal
+{
+  background-image:url('../../lib/media/icons/menu_icon_white_geschrift.png');
+}
+#typemenu .but-overige:hover,
+#typemenu .but-overige.selected,
+#loopcontainer.grid-view .post-artifact .item-icons .but-overige
+{
+  background-image:url('../../lib/media/icons/menu_icon_white_overig.png');
 }
 
 /* items grid */
@@ -136,7 +216,7 @@ grijs donker : #ADB4BE
   background-size:cover;
   width:56px;
   height:56px;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 #loopcontainer.grid-view .item-icons ul li:hover,
 #loopcontainer.grid-view .item-icons ul li.selected
@@ -144,24 +224,77 @@ grijs donker : #ADB4BE
   filter:  none;
 }
 
+#loopcontainer.grid-view .post-artifact .item-icons .but-foto
+{
+
+}
 
 
 
+#loopcontainer.list-view .post-artifact .innerpadding {
+  background-color: #dfdfdf;
+  height:15vh;
+}
+#loopcontainer.list-view .post-artifact:hover .innerpadding {
+  background-color: #eeeeee;
+  height:15vh;
+}
 #loopcontainer.list-view .post-artifact .overlay
 {
+  position: relative;
 }
 #loopcontainer.list-view .post-artifact .overlay .item-icons
 {
-  float:right;
-  width:30%;
+  position:absolute;
+  right:0px;
+  top:30px;
+  width:18%;
 }
+#loopcontainer.list-view .post-artifact .artifact-image
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:15vh;
+  width:15vw;
+  margin-right:2%;
+  text-align: center;
+  overflow:hidden;
+  float:left;
+}
+#loopcontainer.list-view .post-artifact img.wp-post-image
+{
+  height:96%;
+  width::auto;
+}
+
+#loopcontainer.list-view .post-artifact.square img.wp-post-image
+{
+  height:84%;
+  width::auto;
+}
+#loopcontainer.list-view .post-artifact.landscape img.wp-post-image
+{
+  width:70%;
+  height:auto;
+}
+#loopcontainer.list-view .post-artifact.panorama img.wp-post-image
+{
+  width:100%;
+  height:auto;
+}
+
+#loopcontainer.list-view .post-artifact .overlay .entry-title,
 #loopcontainer.list-view .post-artifact .overlay .item-excerpt
 {
+  padding:10px 0px !important;
+  max-width:68%;
 }
 
 #loopcontainer.list-view .item-icons ul
 {
   padding:0 !important;
+  height:54px;
 }
 #loopcontainer.list-view .item-icons ul li
 {
@@ -169,8 +302,8 @@ grijs donker : #ADB4BE
   padding:5px;
   list-style-type: none;
   background-size:cover;
-  width:46px;
-  height:46px;
+  width:42px;
+  height:42px;
   filter:  none;
 }
 #loopcontainer.list-view .item-icons ul li:hover,
