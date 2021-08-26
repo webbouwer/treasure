@@ -1,5 +1,4 @@
 <?php
-
 echo '<div id="loopcontainer">';
 
 if ( have_posts() ) :
@@ -25,25 +24,33 @@ if ( have_posts() ) :
 						the_post_thumbnail( 'full' );
 				}
 
+        echo '<header class="entry-header">';
         echo '<h1><a href="'.get_the_permalink().'">'.get_the_title().'</a></h1>';
-
-
+        echo '</header>';
+        echo '<div class="entry-content">';
         echo apply_filters('the_content', get_the_content());
+        echo '</div>';
 
         if( is_single() && ( comments_open() || get_comments_number() ) ){
             comments_template( '/html/comments.php' );
         }
 
     }else{
-        if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-            the_post_thumbnail( 'thumb' );
-        }
-        echo '<h1><a href="'.get_the_permalink().'">'.get_the_title().'</a></h1>';
-        echo apply_filters('the_excerpt', get_the_excerpt()); // the_excerpt_length( 32 );
 
+      if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+          the_post_thumbnail( 'thumb' );
+      }
+
+      echo '<header class="entry-header">';
+      echo '<h3><a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>';
+      echo '</header>';
+      echo '<div class="entry-excerpt">';
+      echo apply_filters('the_excerpt', get_the_excerpt()); // the_excerpt_length( 32 );
+      echo '</div>';
     }
 
     echo '</div></div>';
+
 
   endwhile;
 
@@ -54,27 +61,3 @@ wp_link_pages();
 wp_reset_query();
 
 echo '</div>'; // end loopcontainer
-
-
-
-// sidebar
-if ( has_nav_menu( 'sidemenu' ) || ( function_exists('is_sidebar_active') && is_sidebar_active('sidebar') ) ){
-
-echo '<div id="sidebar"><div class="sidebarmargin">';
-
-// sidemenu
-if ( has_nav_menu( 'sidemenu' ) ){
-  echo '<div id="sidemenubox"><div id="sidemenu" class="pos-default"><nav><div class="innerpadding">';
-    wp_nav_menu( array( 'theme_location' => 'sidemenu' ) );
-  echo '</div></nav></div></div>';
-}
-// sidebar
-if( function_exists('is_sidebar_active') && is_sidebar_active('sidebar') ){
-  echo '<div id="sidebar_widgets"><div class="widgets_outermargin">';
-    dynamic_sidebar('sidebar');
-  echo '</div></div>';
-}
-
-echo '</div></div>';
-
-}

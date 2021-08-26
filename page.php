@@ -1,11 +1,10 @@
 <?php
-/* treasure
- * page.php
- * default theme file
- */
+/* page.php */
 
  get_header();
 
- get_template_part('html/content');
+ get_template_part('views/parts/loop');
+
+ get_template_part('views/parts/sidebar');
 
  get_footer();

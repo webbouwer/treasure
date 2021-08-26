@@ -5,7 +5,7 @@ if( $footer_display != 'hide' ){
 
 echo '<footer class="site-footer">';
 
-echo '<div id="footer" class="outermargin">';
+echo '<div id="footer"><div class="outermargin">';
 
 // bottombar menu
 if ( has_nav_menu( 'footer' ) ){
@@ -19,7 +19,7 @@ if( function_exists('is_sidebar_active') && is_sidebar_active('footer-widgets') 
   echo '<div class="clr"></div>';
 }
 
-echo '</div>';
+echo '</div></div>';
 
 
 echo '<div id="footnotecontent"><div class="outermargin">';

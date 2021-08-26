@@ -3,7 +3,7 @@
 
 echo '</main></div></div>'; // end content-area
 
-get_template_part('html/footer');
+get_template_part('views/parts/footer');
 
 echo '</div>';
 

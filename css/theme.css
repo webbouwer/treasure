@@ -1,0 +1,125 @@
+/* theme framework css properties set */
+
+.innerpadding
+{
+  background-color:rgba(120,120,120,0.5);
+  padding:1vh;
+}
+
+#logobox.site-logo .innerpadding a.site-logo img
+{
+    max-height:280px;
+    height:auto;
+    max-width:90%;
+    width:auto;
+}
+
+
+
+@media only screen and (min-width: 760px) {
+
+.outermargin
+{
+  max-width:1440px;
+  width:100%;
+  margin:0px auto;
+}
+
+.innerpadding
+{
+  padding:2vh;
+}
+
+/* page elements */
+#page.site
+{
+  position:relative;
+  min-height:100%;
+  width:100%;
+  /* desktop fullscreen only */
+}
+
+
+
+header#masthead.site-header /*has-title-and-tagline has-menu */
+{
+
+}
+#header #mainbar .outermargin
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#header #mainbar .outermargin #logobox
+{
+  /*
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex:1;
+  */
+}
+#logobox.site-logo .innerpadding a.site-logo img
+{
+    max-height:280px;
+    height:auto;
+    max-width:420px;
+    width:auto;
+}
+#header #mainbar .outermargin #primarymenubox.primary-navigation
+{
+  /*
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex:2;
+  */
+}
+#primarymenu nav .innerpadding .menu-mainmenu-container ul#menu-mainmenu.menu li.menu-item a
+{
+
+}
+
+
+
+
+#content.site-content #primary.content-area
+{
+
+}
+#content .outermargin #main
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main#main.site-main #loopcontainer
+{
+}
+
+.post .innerpadding,
+.page .innerpadding,
+.hentry .innerpadding
+{
+
+}
+
+main#main.site-main #sidebar
+{
+  min-width:240px;
+}
+
+
+
+footer.site-footer #footer .outermargin
+{
+
+}
+footer.site-footer #footnotecontent .outermargin #footnote_copyright.column .innerpadding
+{
+
+}
+
+}
