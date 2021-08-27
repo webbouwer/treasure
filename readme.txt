@@ -1,3 +1,3 @@
-Collections
+Treasure (Collections)
 
-Wordpress plugin for artifact collections
+Wordpress theme for artifact collections
