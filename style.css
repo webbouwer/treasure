@@ -17,3 +17,54 @@ Text Domain: treasure
 @import "css/global.css";
 @import "css/theme.css";
 @import "css/custom.css";
+
+
+
+/* fonts used */
+@font-face {
+    font-family: 'Archery';
+    src: url("fonts/archery/archery_black_rounded_regular.eot");
+	src: url('fonts/archery/archery_black_rounded_regular.eot?#iefix') format('embedded-opentype'),
+        /* url('fonts/archery/archery_black_rounded_regular.woff') format('woff'), */
+         url('fonts/archery/archery_black_rounded_regular.ttf') format('truetype');
+    	 /*url('fonts/archery/archery_black_rounded_regular.otf') format('opentype'),
+         url('fonts/archery/archery_black_rounded_regular.svg') format('svg'); */
+}
+
+@font-face {
+    font-family: 'Montserrat-regular';
+    src: url("fonts/montserrat/Montserrat-Regular.eot");
+	src: url('fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+         /*url('fonts/montserrat/Montserrat-Regular.woff') format('woff'),*/
+         url('fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+    	 /*url('fonts/montserrat/Montserrat-Regular.otf') format('opentype'),
+         url('fonts/montserrat/Montserrat-Regular.svg') format('svg');*/
+}
+@font-face {
+    font-family: 'Montserrat-semibold';
+    src: url("fonts/montserrat/Montserrat-SemiBold.eot");
+	src: url('fonts/montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        /* url('fonts/montserrat/Montserrat-SemiBold.woff') format('woff'),*/
+         url('fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    /*	 url('fonts/montserrat/Montserrat-SemiBold.otf') format('opentype'),
+         url('fonts/montserrat/Montserrat-SemiBold.svg') format('svg'); */
+}
+
+.Archeryfont
+{
+			font-family: "Archery", Arial, Helvetica, sans-serif;
+}
+
+.Montserrat
+{
+			font-family: "Montserrat-regular", Arial, Helvetica, sans-serif;
+}
+
+
+H1,H2,
+.innerpadding,
+.MontserratSB,
+.text
+{
+			font-family: "Montserrat-semibold", Arial, Helvetica, sans-serif;
+}

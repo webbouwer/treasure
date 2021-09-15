@@ -1,8 +1,10 @@
+
+
 /* theme framework css properties set */
 
 .innerpadding
 {
-  background-color:rgba(120,120,120,0.5);
+  /*background-color:rgba(120,120,120,0.5);*/
   padding:1vh;
 }
 
@@ -14,13 +16,11 @@
     width:auto;
 }
 
-
-
 @media only screen and (min-width: 760px) {
 
 .outermargin
 {
-  max-width:1440px;
+  max-width:1600px;
   width:100%;
   margin:0px auto;
 }
@@ -30,18 +30,17 @@
   padding:2vh;
 }
 
-/* page elements */
+
 #page.site
 {
   position:relative;
   min-height:100%;
   width:100%;
-  /* desktop fullscreen only */
 }
 
 
+header# masthead.site-header
 
-header#masthead.site-header /*has-title-and-tagline has-menu */
 {
 
 }
@@ -53,12 +52,7 @@ header#masthead.site-header /*has-title-and-tagline has-menu */
 }
 #header #mainbar .outermargin #logobox
 {
-  /*
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex:1;
-  */
+
 }
 #logobox.site-logo .innerpadding a.site-logo img
 {
@@ -69,12 +63,7 @@ header#masthead.site-header /*has-title-and-tagline has-menu */
 }
 #header #mainbar .outermargin #primarymenubox.primary-navigation
 {
-  /*
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex:2;
-  */
+
 }
 #primarymenu nav .innerpadding .menu-mainmenu-container ul#menu-mainmenu.menu li.menu-item a
 {
@@ -90,9 +79,11 @@ header#masthead.site-header /*has-title-and-tagline has-menu */
 }
 #content .outermargin #main
 {
+  /*
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  */
 }
 
 main#main.site-main #loopcontainer

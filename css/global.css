@@ -17,5 +17,10 @@ width:100%;
 
 .screen-reader-text
 {
-  
+
+}
+
+#loopcontainer .post img
+{
+  max-width:100%;
 }
