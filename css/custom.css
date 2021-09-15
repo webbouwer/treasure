@@ -277,13 +277,13 @@ grijs donker : #ADB4BE
 /* items list */
 
 
-/* popcontainer
+/* popcontainer */
 #overlaycontainer .popcontainer .contentbox
 {
   position:fixed;
   bottom:0px;
   left:0px;
-  width:inherit;
+  width:100vw;
 }
 #overlaycontainer .popcontainer .contentbox .innerpadding
 {
@@ -294,11 +294,16 @@ grijs donker : #ADB4BE
   min-width:320px;
   width:68%;
   margin:0px auto;
-}
 
+}
+#overlaycontainer .popcontainer .infotext
+{
+  display:block;
+  width:100%;
+}
 #overlaycontainer .popcontainer .column
 {
   margin:0.33%;
+  display:inline-block;
   background-color:#ADB4BE;
 }
-*/
