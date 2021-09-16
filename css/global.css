@@ -15,9 +15,16 @@ height:100%;
 width:100%;
 }
 
+body
+{
+}
+
 .screen-reader-text
 {
 
+}
+#content
+{
 }
 
 #loopcontainer .post img

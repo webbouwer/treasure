@@ -1,6 +1,7 @@
 /*
 rood roze : #FF004D
 grijs donker : #ADB4BE
+blauw : #00A3E8;
 */
 
 /* primary menu */
@@ -278,32 +279,85 @@ grijs donker : #ADB4BE
 
 
 /* popcontainer */
+#overlaycontainer .popcontainer
+{
+  position:relative;
+}
 #overlaycontainer .popcontainer .contentbox
 {
   position:fixed;
   bottom:0px;
   left:0px;
-  width:100vw;
+  width:100%;
 }
-#overlaycontainer .popcontainer .contentbox .innerpadding
+
+
+#overlaycontainer .popcontainer .mediabox
 {
-  min-height:10vh;
+  min-height:60vh;
   background-color: #ffffff;
-  border-top:3px solid #ADB4BE;
   max-width:960px;
   min-width:320px;
   width:68%;
   margin:0px auto;
-
+  padding-bottom:10vh;
 }
-#overlaycontainer .popcontainer .infotext
+
+#overlaycontainer .popcontainer .mediabox .mediacontainer
+{
+  width:100%;
+  min-height:100%;
+}
+
+#overlaycontainer .popcontainer .contentbox .innerpadding
+{
+  display:flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-top:3px solid #ADB4BE; /* #00A3E8;*/
+  max-width:960px;
+  min-width:320px;
+  width:68%;
+  margin:0px auto;
+}
+#overlaycontainer .popcontainer .innerpadding .infotext
 {
   display:block;
-  width:100%;
+  width:40%;
+  min-height:150px;
 }
-#overlaycontainer .popcontainer .column
+
+
+#overlaycontainer .popcontainer .contentbox .innerpadding .column
 {
   margin:0.33%;
-  display:inline-block;
   background-color:#ADB4BE;
+  max-height:64px;
 }
+#overlaycontainer .popcontainer .contentbox .innerpadding .column .media-icon
+{
+    position: relative;
+}
+
+
+
+#overlaycontainer .popcontainer .mediabox .mediaholder
+{
+  width:100% !important;
+  min-height:60vh;
+  min-width:460px;
+  border-top:3px solid #ADB4BE;
+  /* background-color:#ADB4BE;*/
+}
+#overlaycontainer .popcontainer .mediabox .mediaholder img,
+#overlaycontainer .popcontainer .mediabox .mediaholder iframe,
+#overlaycontainer .popcontainer .mediabox .mediaholder video
+{
+  width:100% !important;
+  min-height:480px;
+  height:100%;
+}
+
+/* image formats
+#overlaycontainer .popcontainer .mediabox .mediaholder img
+*/
