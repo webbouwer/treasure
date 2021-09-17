@@ -305,6 +305,7 @@ blauw : #00A3E8;
 
 #overlaycontainer .popcontainer .mediabox .mediacontainer
 {
+  position:relative;
   width:100%;
   min-height:100%;
   border-top:3px solid #ADB4BE;
@@ -326,15 +327,32 @@ blauw : #00A3E8;
 {
   padding: 2vh;
   border-top:3px solid #ADB4BE; /* #00A3E8;*/
+  background:url('../icons/minus_icon_grey.png') center right no-repeat #ffffff;
+}
+#overlaycontainer .popcontainer .contentbox .title:hover
+{
+  background:url('../icons/minus_icon_blue.png') center right no-repeat #ffffff;
+}
+#overlaycontainer .popcontainer .contentbox .title.closed
+{
+  background:url('../icons/arrow_icon_up_grey.png') center right no-repeat #ffffff;
+}
+#overlaycontainer .popcontainer .contentbox .title.closed:hover
+{
+  background:url('../icons/arrow_icon_up_blue.png') center right no-repeat #ffffff;
 }
 
 #overlaycontainer .popcontainer .innerpadding .infotext
 {
   display:block;
-  width:40%;
+  width:40%; 
   min-height:10vh;
 }
 
+#overlaycontainer .popcontainer .contentbox .innerpadding
+{
+
+}
 
 #overlaycontainer .popcontainer .contentbox .innerpadding .column
 {
@@ -349,11 +367,15 @@ blauw : #00A3E8;
 
 
 
+
+
 #overlaycontainer .popcontainer .mediabox .mediaholder
 {
+  position:relative;
   width:100% !important;
   min-height:60vh;
   min-width:460px;
+  overflow:visible;
   /* background-color:#ADB4BE;*/
 }
 #overlaycontainer .popcontainer .mediabox .mediaholder img,
@@ -367,12 +389,51 @@ blauw : #00A3E8;
 }
 #overlaycontainer .popcontainer .mediabox .mediaholder iframe
 {
-  min-height:70vh;
+  position:relative;
+  min-height:60vh !important;
 }
 #overlaycontainer .popcontainer .mediabox .mediaholder img
 {
   min-height:320px;
   height:auto;
+}
+
+
+#prevmedia,
+#nextmedia
+{
+  display:block;
+  position:absolute;
+  top:30%;
+  width:64px;
+  height:64px;
+  z-index:99;
+  border:none;
+  background-color:transparent;
+  content: '';
+}
+#prevmedia span,
+#nextmedia span
+{
+  display:none;
+}
+#prevmedia
+{
+  left:15px;
+  background:url('../icons/arrow_icon_left_grey.png');
+}
+#nextmedia
+{
+  right:15px;
+  background:url('../icons/arrow_icon_right_grey.png');
+}
+#prevmedia:hover
+{
+  background:url('../icons/arrow_icon_left_blue.png');
+}
+#nextmedia:hover
+{
+  background:url('../icons/arrow_icon_right_blue.png');
 }
 /* image formats
 #overlaycontainer .popcontainer .mediabox .mediaholder img
