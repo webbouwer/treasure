@@ -230,6 +230,86 @@ blauw : #00A3E8;
   background-image:url('../icons/menu_icon_white_overig.png');
 }
 
+
+/* toggle grid / list */
+#display-toggle
+{
+  position:absolute;
+  top:-29px;
+  right:8px;
+  z-index:99;
+}
+#display-toggle a
+{
+  width:48px;
+  height:48px;
+}
+.grid-view #display-toggle a.list
+{
+  display:block;
+  background-image:url('../icons/menu_icon_list_grey.png');
+  background-size:cover;
+}
+.list-view #display-toggle a.grid
+{
+  display:block;
+  background-image:url('../icons/menu_icon_grid_grey.png');
+  background-size:cover;
+}
+#display-toggle a span{
+  display:none;
+}
+
+.grid-view a.grid
+{
+  display:none;
+}
+.list-view a.list
+{
+  display:none;
+}
+
+
+#display-options
+{
+  position:absolute;
+  top:-29px;
+  right:100px;
+  z-index:99;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+#display-options ul
+{
+  display:block;
+  list-style:none;
+  margin:0;
+}
+#display-options ul li
+{
+  padding:6px 5px;
+  font-size:1.3em;
+  color: #ADB4BE;
+  min-width:80px;
+  font-family: "Archery", Arial, Helvetica, sans-serif;
+  background-color:#ffffff;
+}
+#display-options ul.orderby li:not(.selected),
+#display-options ul.order li:not(.selected)
+{
+  display:none;
+}
+#display-options ul.orderby:hover li:not(.selected),
+#display-options ul.order:hover li:not(.selected)
+{
+  display:block;
+}
+
+
+#loopcontainer
+{
+}
+
 /* items grid */
 #loopcontainer.grid-view .post-artifact
 {
@@ -290,7 +370,14 @@ blauw : #00A3E8;
   left:0px;
   width:100%;
 }
-
+#overlaycontainer .popcontainer .prevnextnav
+{
+  position:relative;
+  margin:0px auto;
+  max-width:960px;
+  min-width:320px;
+  width:68%;
+}
 
 #overlaycontainer .popcontainer .mediabox
 {
@@ -345,7 +432,7 @@ blauw : #00A3E8;
 #overlaycontainer .popcontainer .innerpadding .infotext
 {
   display:block;
-  width:40%; 
+  width:40%;
   min-height:10vh;
 }
 
@@ -404,7 +491,7 @@ blauw : #00A3E8;
 {
   display:block;
   position:absolute;
-  top:30%;
+  top:16vh;
   width:64px;
   height:64px;
   z-index:99;
@@ -419,12 +506,12 @@ blauw : #00A3E8;
 }
 #prevmedia
 {
-  left:15px;
+  left:-50px;
   background:url('../icons/arrow_icon_left_grey.png');
 }
 #nextmedia
 {
-  right:15px;
+  right:-50px;
   background:url('../icons/arrow_icon_right_grey.png');
 }
 #prevmedia:hover
