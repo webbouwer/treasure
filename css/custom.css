@@ -1,7 +1,11 @@
 /*
 rood roze : #FF004D
-grijs donker : #ADB4BE
+grijs standaard : #ADB4BE
+licht grijs   :#C8CCD2
+Donker grijs   :#5E6877
 blauw : #00A3E8;
+
+
 */
 
 /* primary menu */
@@ -235,8 +239,8 @@ blauw : #00A3E8;
 #display-toggle
 {
   position:absolute;
-  top:-29px;
-  right:8px;
+  top:-36px;
+  right:12px;
   z-index:99;
 }
 #display-toggle a
@@ -285,15 +289,33 @@ blauw : #00A3E8;
   list-style:none;
   margin:0;
 }
+#display-options span,
 #display-options ul li
 {
-  padding:6px 5px;
+  padding:6px 8px;
   font-size:1.3em;
   color: #ADB4BE;
   min-width:80px;
-  font-family: "Archery", Arial, Helvetica, sans-serif;
   background-color:#ffffff;
+  font-family: "Archery", Arial, Helvetica, sans-serif;
 }
+#display-options span
+{
+  display:inline-block;
+  height:32px;
+}
+
+#display-options ul li.selected
+{
+  color: #C8CCD2;
+}
+
+#display-options ul li:hover,
+#display-options ul li.selected:hover
+{
+  color: #5E6877;
+}
+
 #display-options ul.orderby li:not(.selected),
 #display-options ul.order li:not(.selected)
 {
@@ -304,6 +326,9 @@ blauw : #00A3E8;
 {
   display:block;
 }
+
+
+
 
 
 #loopcontainer
@@ -356,6 +381,73 @@ blauw : #00A3E8;
 }
 
 /* items list */
+#loopcontainer.list-view
+{
+  padding-top:15px;
+}
+#loopcontainer.list-view .post-artifact
+{
+  position: relative;
+  display:block;
+  width: 100%;
+  margin-bottom:5px;
+  clear:both;
+}
+#loopcontainer.list-view .post-artifact .innerpadding
+{
+  position:relative;
+  min-height:160px;
+  padding:0px;
+  margin:2px 15px;
+  max-width:640px;
+  margin:0px auto;
+  background-color:#C8CCD2;
+}
+#loopcontainer.list-view .post-artifact .artifact-image
+{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:14vh;
+  width:14vw;
+  text-align: center;
+  overflow:hidden;
+  float:left;
+}
+#loopcontainer.list-view .post-artifact img.wp-post-image
+{
+  height:100%;
+  width::auto;
+}
+
+#loopcontainer.list-view .post-artifact.landscape img.wp-post-image,
+#loopcontainer.list-view .post-artifact.panorama img.wp-post-image
+{
+  width:100%;
+  height:auto;
+}
+
+#loopcontainer.list-view .post-artifact .overlay
+{
+}
+#loopcontainer.list-view .post-artifact .overlay .item-icons
+{
+}
+#loopcontainer.list-view .post-artifact .overlay .item-excerpt
+{
+}
+
+#loopcontainer.list-view .item-icons ul
+{
+float:right;
+}
+#loopcontainer.list-view .item-icons ul li
+{
+}
+#loopcontainer.list-view .item-icons ul li:hover,
+#loopcontainer.list-view .item-icons ul li.selected
+{
+}
 
 
 /* popcontainer */
@@ -525,3 +617,72 @@ blauw : #00A3E8;
 /* image formats
 #overlaycontainer .popcontainer .mediabox .mediaholder img
 */
+
+#infoboxcontainer
+{
+  position:fixed;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  z-index:999;
+  background-color:rgba( 225,225,225, 0.8);
+}
+
+#infoboxcontainer .outermargin
+{
+  display:block;
+  width:100%;
+  max-width:640px;
+  background-color:#fff;
+}
+
+#infoboxcontainer.intro .outermargin .topbox
+{
+  position:relative;
+  width:100%;
+  background-color: #C8CCD2;
+}
+#infoboxcontainer.collection .outermargin .topbox
+{
+  position:relative;
+  width:100%;
+ background-color: #00A3E8;
+}
+
+
+#infoboxcontainer .outermargin .navbox
+{
+  width:100%;
+  height:40px;
+  display: flex;
+}
+
+#infoboxcontainer .outermargin .navbox li
+{
+  flex:1;
+  font-size:1.3em;
+  text-align:right;
+  list-style-type: none;
+  font-family: "Archery", Arial, Helvetica, sans-serif;
+}
+#infoboxcontainer .outermargin .navbox li:first-child
+{
+  flex:4;
+  text-align:left;
+}
+#infoboxcontainer .outermargin .navbox li:first-child a
+{
+  content: 'De Hoekse Schatkist';
+}
+#infoboxcontainer .navbox li a {
+  display:block;
+  text-align:left;
+  padding:5px 5px;
+  font-size:1.3em;
+  color: #ADB4BE;
+  text-decoration:none;
+}
