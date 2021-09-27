@@ -2,11 +2,7 @@
 
 /* theme framework css properties set */
 
-.innerpadding
-{
-  /*background-color:rgba(120,120,120,0.5);*/
-  padding:1vh;
-}
+
 
 #logobox.site-logo .innerpadding a.site-logo img
 {
@@ -28,8 +24,14 @@
 .innerpadding
 {
   padding:2vh;
+  /*background-color:rgba(120,120,120,0.5);*/
 }
-
+.innerpadding h1,
+.innerpadding h2,
+.innerpadding h3
+{
+  display:block;
+}
 
 #page.site
 {
@@ -109,7 +111,10 @@ main#main.site-main #loopcontainer
 		margin:0px auto 15px;
     line-height:1.6em;
 	}
-
+.entry-content p
+{
+    padding:12px 0px;
+}
 main#main.site-main #sidebar
 {
   min-width:240px;

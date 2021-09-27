@@ -4,9 +4,13 @@ grijs standaard : #ADB4BE
 licht grijs   :#C8CCD2
 Donker grijs   :#5E6877
 blauw : #00A3E8;
-
-
 */
+
+/**/
+#collection-info
+{
+  display:none;
+}
 
 /* primary menu */
 .primary-navigation nav
@@ -396,23 +400,27 @@ blauw : #00A3E8;
 #loopcontainer.list-view .post-artifact .innerpadding
 {
   position:relative;
+  display: flex;
   min-height:160px;
-  padding:0px;
-  margin:2px 15px;
+  padding:2vh;
+  margin:2px 2px;
   max-width:640px;
   margin:0px auto;
-  background-color:#C8CCD2;
+  border:3px solid #C8CCD2;
+  background-color:#ffffff;
 }
 #loopcontainer.list-view .post-artifact .artifact-image
 {
+  position:relative;
   display:flex;
   align-items: center;
   justify-content: center;
   height:14vh;
   width:14vw;
+  flex:2;
   text-align: center;
+  margin-right:2vh;
   overflow:hidden;
-  float:left;
 }
 #loopcontainer.list-view .post-artifact img.wp-post-image
 {
@@ -429,21 +437,43 @@ blauw : #00A3E8;
 
 #loopcontainer.list-view .post-artifact .overlay
 {
+flex:4;
 }
 #loopcontainer.list-view .post-artifact .overlay .item-icons
 {
 }
+#loopcontainer.list-view .post-artifact .overlay h2.entry-title a,
+.entry-header a
+{
+  color: #000000; /* #00A3E8; */
+}
 #loopcontainer.list-view .post-artifact .overlay .item-excerpt
 {
+  color:#000000;
 }
 
 #loopcontainer.list-view .item-icons ul
 {
-float:right;
+height:56px;
+/*
+transform: scale(0.7);
+position:absolute;
+top:2vh;
+right:-50px;
+clear:both;
+display:flex;
+*/
 }
 #loopcontainer.list-view .item-icons ul li
 {
+  display:inline-block;
+  padding:5px;
+  list-style-type: none;
+  background-size:cover;
+  width:36px;
+  height:36px;
 }
+
 #loopcontainer.list-view .item-icons ul li:hover,
 #loopcontainer.list-view .item-icons ul li.selected
 {
@@ -466,28 +496,29 @@ float:right;
 {
   position:relative;
   margin:0px auto;
-  max-width:960px;
+  /*max-width:960px;*/
   min-width:320px;
-  width:68%;
+  width:48%;
+  height:100%;
 }
 
 #overlaycontainer .popcontainer .mediabox
 {
-  min-height:60vh;
+  min-height:80vh;
   background-color: #ffffff;
   max-width:960px;
   min-width:320px;
-  width:68%;
+  width:100%;
   margin:0px auto;
-  padding-bottom:18vh;
 }
+
 
 #overlaycontainer .popcontainer .mediabox .mediacontainer
 {
   position:relative;
   width:100%;
   min-height:100%;
-  border-top:3px solid #ADB4BE;
+  /* border-top:3px solid #ADB4BE; */
 }
 
 #overlaycontainer .popcontainer .contentbox .title,
@@ -505,7 +536,7 @@ float:right;
 #overlaycontainer .popcontainer .contentbox .title
 {
   padding: 2vh;
-  border-top:3px solid #ADB4BE; /* #00A3E8;*/
+  /* border-top:3px solid #ADB4BE; /* #00A3E8;*/
   background:url('../icons/minus_icon_grey.png') center right no-repeat #ffffff;
 }
 #overlaycontainer .popcontainer .contentbox .title:hover
@@ -544,15 +575,21 @@ float:right;
     position: relative;
 }
 
-
-
+.mediaholder img,
+.mediaholder iframe,
+.mediaholder video,
+#loopcontainer.list-view .post-artifact .innerpadding
+{
+  -webkit-box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.56);
+  box-shadow: 0px 5px 11px -1px rgba(0,0,0,0.56);
+}
 
 
 #overlaycontainer .popcontainer .mediabox .mediaholder
 {
   position:relative;
   width:100% !important;
-  min-height:60vh;
+  min-height:80vh;
   min-width:460px;
   overflow:visible;
   /* background-color:#ADB4BE;*/
@@ -562,28 +599,49 @@ float:right;
 #overlaycontainer .popcontainer .mediabox .mediaholder video
 {
   display:block;
-  width:100% !important;
-  min-height:360px;
+  width: 460px; /*100% !important; */
+  min-height:60vh;
   height:100%;
+  margin: 0px auto;
 }
 #overlaycontainer .popcontainer .mediabox .mediaholder iframe
 {
   position:relative;
-  min-height:60vh !important;
+  width: 640px; /*100% !important; */
+  min-height:80vh !important;
 }
 #overlaycontainer .popcontainer .mediabox .mediaholder img
 {
   min-height:320px;
   height:auto;
+  width:100%;
+  margin: 0px auto;
+}
+#overlaycontainer .popcontainer .mediabox .mediaholder img.landscape
+{
+  width:100%;
+  height:auto;
+  margin: 0px auto;
+}
+#overlaycontainer .popcontainer .mediabox .mediaholder img.portrait,
+#overlaycontainer .popcontainer .mediabox .mediaholder img.square
+{
+  width: 460px; /*100% !important; */
+  height:auto;
+  margin: 0px auto;
 }
 
 
+.prevnextnav
+{
+
+}
 #prevmedia,
 #nextmedia
 {
   display:block;
   position:absolute;
-  top:16vh;
+  top:13vh;
   width:64px;
   height:64px;
   z-index:99;
@@ -617,6 +675,38 @@ float:right;
 /* image formats
 #overlaycontainer .popcontainer .mediabox .mediaholder img
 */
+.mediabox
+{
+  display:flex;
+  justify-content: center;
+  min-height:360px;
+}
+
+.mediabox .cover
+{
+  position:relative;
+  display:block;
+}
+.mediabox .cover img
+{
+  max-width:100%;
+  height:auto;
+}
+
+.mediabox.display .cover
+{
+  position:absolute;
+  left:15px;
+  width:15%;
+  height:auto;
+}
+.mediabox.display .cover .title h1
+{
+  font-size:1.1em;
+}
+
+
+
 
 #infoboxcontainer
 {
@@ -651,38 +741,4 @@ float:right;
   position:relative;
   width:100%;
  background-color: #00A3E8;
-}
-
-
-#infoboxcontainer .outermargin .navbox
-{
-  width:100%;
-  height:40px;
-  display: flex;
-}
-
-#infoboxcontainer .outermargin .navbox li
-{
-  flex:1;
-  font-size:1.3em;
-  text-align:right;
-  list-style-type: none;
-  font-family: "Archery", Arial, Helvetica, sans-serif;
-}
-#infoboxcontainer .outermargin .navbox li:first-child
-{
-  flex:4;
-  text-align:left;
-}
-#infoboxcontainer .outermargin .navbox li:first-child a
-{
-  content: 'De Hoekse Schatkist';
-}
-#infoboxcontainer .navbox li a {
-  display:block;
-  text-align:left;
-  padding:5px 5px;
-  font-size:1.3em;
-  color: #ADB4BE;
-  text-decoration:none;
 }
