@@ -6,10 +6,15 @@
 
 #logobox.site-logo .innerpadding a.site-logo img
 {
-    max-height:280px;
+    max-height:180px;
     height:auto;
     max-width:90%;
     width:auto;
+}
+
+.large #logobox.site-logo .innerpadding a.site-logo img
+{
+    max-height:280px;
 }
 
 @media only screen and (min-width: 760px) {
@@ -46,7 +51,7 @@ header# masthead.site-header
 {
 
 }
-#header #mainbar .outermargin
+.large #header #mainbar .outermargin
 {
   display: flex;
   flex-direction: row;
@@ -67,6 +72,7 @@ header# masthead.site-header
 {
 
 }
+
 #primarymenu nav .innerpadding .menu-mainmenu-container ul#menu-mainmenu.menu li.menu-item a
 {
 
