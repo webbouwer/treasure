@@ -4,7 +4,8 @@
 
 
 
-#logobox.site-logo .innerpadding a.site-logo img
+#logobox.site-logo .innerpadding a.site-logo img,
+.medium #logobox.site-logo .innerpadding a.site-logo img
 {
     max-height:180px;
     height:auto;
@@ -12,10 +13,49 @@
     width:auto;
 }
 
+.small #logobox.site-logo .innerpadding a.site-logo img
+{
+    max-height:160px;
+    min-height:120px;
+    height:auto;
+    min-width:200px;
+    max-width:60%;
+    width:auto;
+}
+
+.innerpadding
+{
+  padding:2vh;
+  /*background-color:rgba(120,120,120,0.5);*/
+}
+
 .large #logobox.site-logo .innerpadding a.site-logo img
 {
     max-height:280px;
 }
+
+/*
+#page
+{
+  min-height:calc(100% - 50px);
+  padding-bottom:50px;
+}
+*/
+/*
+footer.site-footer
+{
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  width:100%;
+}
+*/
+footer.site-footer #footnotecontent .outermargin #footnote_copyright.column .innerpadding
+{
+  text-align:center;
+  font-size:0.6em;
+}
+
 
 @media only screen and (min-width: 760px) {
 
@@ -26,11 +66,7 @@
   margin:0px auto;
 }
 
-.innerpadding
-{
-  padding:2vh;
-  /*background-color:rgba(120,120,120,0.5);*/
-}
+
 .innerpadding h1,
 .innerpadding h2,
 .innerpadding h3
@@ -134,7 +170,8 @@ footer.site-footer #footer .outermargin
 }
 footer.site-footer #footnotecontent .outermargin #footnote_copyright.column .innerpadding
 {
-
 }
+
+
 
 }
