@@ -23,8 +23,13 @@ body
 {
 
 }
+
+
+
+
 #content
 {
+  min-height:100%; 
 }
 
 #loopcontainer .post img
