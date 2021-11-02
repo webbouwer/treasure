@@ -149,21 +149,92 @@ main#main.site-main #loopcontainer
 .entry-header,
 .entry-excerpt,
 .entry-content
-	{
-		max-width:560px;
-		margin:0px auto 15px;
-    line-height:1.6em;
-	}
+{
+	max-width:560px;
+	margin:0px auto 15px;
+  line-height:1.6em;
+}
+
+.postnavigation
+{
+	max-width:560px;
+	margin:0px auto 15px;
+  font-size:0.8em;
+  line-height:1.5em;
+}
+
+.postnavigation a {
+  color:#ADB4BE;
+}
+.postnavigation a:hover {
+  color:#01A2E6;
+}
+
+.alignleft
+{
+  float:left;
+}
+.alignright
+{
+  float:right;
+}
+
+.post .entry-thumb
+{
+  width:100%;
+  text-align:center;
+}
+.post .entry-thumb img
+{
+  max-width:560px !important;
+  height:auto;
+}
+
+.post .entry-thumb img
+{
+  max-width:560px !important;
+  width:100% !important;
+  height:auto;
+  margin:0px auto 12px;
+}
+.post .entry-cover
+{
+  text-align:center;
+}
+.post .entry-cover img
+{
+  max-width:960px !important;
+  width:100% !important;
+  height:auto;
+  margin-bottom:30px;
+}
+.entry-header h1
+{
+  font-size:27px;
+  line-height:1.6em;
+}
 .entry-content p
 {
     padding:12px 0px;
 }
+
+.page .entry-content a {
+  color: #01A2E6;
+}
+.page .entry-content a:hover {
+  color: #FF004C;
+}
+
+
 main#main.site-main #sidebar
 {
   min-width:240px;
 }
 
-
+footer.site-footer
+{
+  clear:both;
+}
 
 footer.site-footer #footer .outermargin
 {

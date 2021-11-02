@@ -156,6 +156,11 @@ blauw : #00A3E8;
   padding:15px;
   font-family: "Montserrat-semibold", Arial, Helvetica, sans-serif;
   font-size:1em;
+  cursor:pointer;
+}
+#infoboxcontainer.intro .outermargin .skippintro:hover span
+{
+  color:#00A3E8;
 }
 
 .closeoverlay,
@@ -396,8 +401,18 @@ blauw : #00A3E8;
   background-image:url('../icons/menu_icon_grid_grey.png');
   background-size:cover;
 }
-#display-toggle a span{
+#display-toggle a span
+{
   display:none;
+}
+#display-toggle a:hover span{
+  display:block;
+  position:absolute;
+  top:-16px;
+  right:8px;
+  font-size:1em;
+  color: #ADB4BE;
+  font-family: "Archery", Arial, Helvetica, sans-serif;
 }
 
 .grid-view a.grid
@@ -665,7 +680,6 @@ height:56px;
 
 #overlaycontainer .popcontainer .mediabox
 {
-
   min-height:80vh;
   background-color: #ffffff;
   max-width:960px;
@@ -814,17 +828,17 @@ height:56px;
 .large #overlaycontainer .popcontainer .mediabox .mediaholder img.portrait,
 .large #overlaycontainer .popcontainer .mediabox .mediaholder img.square
 {
-  /*
   width: 460px;
   height:auto;
   margin: 0px auto;
-*/
 
-max-width: 460px;
-width: auto;
+  /*
+  max-width: 460px;
+  width: auto;
   min-height:80vh !important;
   margin: 0px auto;
   max-height:100%;
+  */
 }
 
 

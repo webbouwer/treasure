@@ -21,7 +21,9 @@ if ( have_posts() ) :
     if( is_single() || is_page() ){
 
         if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+          echo '<div class="entry-cover">';
 						the_post_thumbnail( 'full' );
+          echo '</div>';
 				}
 
         echo '<header class="entry-header">';
@@ -31,14 +33,23 @@ if ( have_posts() ) :
         echo apply_filters('the_content', get_the_content());
         echo '</div>';
 
+        echo '<div class="postnavigation"><div class="alignleft">';
+        previous_post_link( '%link', 'Vorige bericht:<br/> %title', true );
+        echo '</div><div class="alignright">';
+        next_post_link( '%link', 'Volgende bericht:<br/> %title', true );
+        echo '</div></div>';
+
         if( is_single() && ( comments_open() || get_comments_number() ) ){
             comments_template( '/html/comments.php' );
         }
 
     }else{
 
+
       if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-          the_post_thumbnail( 'thumb' );
+        echo '<div class="entry-thumb">';
+          the_post_thumbnail( 'large' );
+        echo '</div>';
       }
 
       echo '<header class="entry-header">';
