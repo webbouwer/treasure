@@ -69,6 +69,10 @@ blauw : #00A3E8;
 
 
 /* collections overview typemenu */
+#typemenu
+{
+  position:relative;
+}
 .large #typemenu
 {
   height:120px;
@@ -79,6 +83,12 @@ blauw : #00A3E8;
   display:flex;
   list-style:none;
   flex-direction: row;
+}
+.small #typemenu,
+.medium #typemenu
+{
+  max-width:640px;
+  margin:0px auto;
 }
 .small #typemenu ul,
 .medium #typemenu ul
@@ -117,28 +127,84 @@ blauw : #00A3E8;
   margin:0;
 }
 
-#typemenu .reset
+#typemenu .menuinfo
 {
   color:#ADB4BE; /* #5E6877;*/
   font-family: "Archery", Arial, Helvetica, sans-serif;
 }
 
-#typemenu .reset span
+#typemenu .menuinfo span
 {
 }
-.large #typemenu .reset
+.large #typemenu .menuinfo
 {
   margin-top:46px;
   font-size:1.2em;
   color:#ADB4BE; /* #5E6877;*/
 }
 
-.small #typemenu .reset,
-.medium #typemenu .reset
+.small #typemenu .menuinfo,
+.medium #typemenu .menuinfo
 {
   margin-top:21px;
   margin-bottom:-40px;
   font-size:1em;
+  min-height:30px;
+}
+
+#helpinfo
+{
+  color:#ADB4BE; /* #5E6877;*/
+  font-family: "Archery", Arial, Helvetica, sans-serif;
+  font-size:1.6em;
+  position:absolute;
+  right:26px;
+  margin-top:-6px;
+  cursor:pointer;
+}
+
+.small #helpinfo
+{
+  font-size:1em;
+}
+
+#infoboxcontainer #helpcontent
+{
+  padding:30px;
+  font-family: "Montserrat-semibold", Arial, Helvetica, sans-serif;
+}
+#infoboxcontainer #helpcontent h3
+{
+  font-size:1em;
+}
+#infoboxcontainer #helpcontent p
+{
+  padding:10px 0px;
+}
+
+#show-recent
+{
+  color:#ADB4BE; /* #5E6877;*/
+  font-family: "Archery", Arial, Helvetica, sans-serif;
+  font-size:1.6em;
+  position:absolute;
+  top:-21px;
+  left:20px;
+  cursor:pointer;
+}
+#show-recent:hover
+{
+  color: #01A2E6;
+}
+
+.small #show-recent
+{
+  color:#ADB4BE; /* #5E6877;*/
+  font-family: "Archery", Arial, Helvetica, sans-serif;
+  font-size:1em;
+  position:absolute;
+  top:-131px;
+  left:20px;
 }
 
 
@@ -237,7 +303,7 @@ blauw : #00A3E8;
   width:100%;
   text-align:center;
   color:#ADB4BE;
-  font-size: 17px;
+  font-size: 16px;
   letter-spacing:0.1em;
 }
 .icon-button.selected span,
@@ -449,8 +515,14 @@ blauw : #00A3E8;
   min-width:80px;
   background-color:#ffffff;
   font-family: "Archery", Arial, Helvetica, sans-serif;
+}
+
+#display-options ul.orderby li,
+#display-options ul.order li
+{
   cursor:pointer;
 }
+
 #display-options span
 {
   display:inline-block;
@@ -1029,6 +1101,7 @@ height:56px;
 
 #infoboxcontainer .outermargin
 {
+  position:relative;
   display:block;
   width:calc(100%-30px);
   max-width:640px;
