@@ -1,10 +1,10 @@
-<?php
-/* index.php */
-
-get_header();
-
-get_template_part('views/parts/loop');
-
-get_template_part('views/parts/sidebar');
-
-get_footer();
+<?php
+/* index.php */
+
+get_header();
+
+get_template_part('views/parts/loop');
+
+get_template_part('views/parts/sidebar');
+
+get_footer();
