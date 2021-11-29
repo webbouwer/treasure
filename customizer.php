@@ -1,8 +1,4 @@
 <?php
-/* protago
- * customizer.php
- */
-
 // customizer default sanitize function
 function treasure_sanitize_default($obj){
     return $obj;     // todo .. empty sanitizer
@@ -61,7 +57,7 @@ function treasure_customizer_init( $wp_customize ){
  	  'priority' => 30,
  	));
  	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'treasure_logo_image', array(
- 		'label'    => __( 'Logo image', 'protago' ),
+ 		'label'    => __( 'Logo image', 'treasure' ),
  		'section'  => 'title_tagline',
  		'settings' => 'treasure_logo_image',
  		'description' => __( 'Upload or select a logo image', 'treasure' ),

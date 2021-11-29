@@ -14,95 +14,57 @@ Text Domain: treasure
 */
 
 
-@import "css/header.css";
-@import "css/content.css";
-@import "css/footer.css";
+@import "css/global.css";
+@import "css/theme.css";
+@import "css/custom.css";
 
-/* Global default styles */
 
-*
+
+/* fonts used */
+@font-face {
+    font-family: 'Archery';
+    src: url("fonts/archery/archery_black_rounded_regular.eot");
+	src: url('fonts/archery/archery_black_rounded_regular.eot?#iefix') format('embedded-opentype'),
+        /* url('fonts/archery/archery_black_rounded_regular.woff') format('woff'), */
+         url('fonts/archery/archery_black_rounded_regular.ttf') format('truetype');
+    	 /*url('fonts/archery/archery_black_rounded_regular.otf') format('opentype'),
+         url('fonts/archery/archery_black_rounded_regular.svg') format('svg'); */
+}
+
+@font-face {
+    font-family: 'Montserrat-regular';
+    src: url("fonts/montserrat/Montserrat-Regular.eot");
+	src: url('fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+         /*url('fonts/montserrat/Montserrat-Regular.woff') format('woff'),*/
+         url('fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+    	 /*url('fonts/montserrat/Montserrat-Regular.otf') format('opentype'),
+         url('fonts/montserrat/Montserrat-Regular.svg') format('svg');*/
+}
+@font-face {
+    font-family: 'Montserrat-semibold';
+    src: url("fonts/montserrat/Montserrat-SemiBold.eot");
+	src: url('fonts/montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        /* url('fonts/montserrat/Montserrat-SemiBold.woff') format('woff'),*/
+         url('fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    /*	 url('fonts/montserrat/Montserrat-SemiBold.otf') format('opentype'),
+         url('fonts/montserrat/Montserrat-SemiBold.svg') format('svg'); */
+}
+
+.Archeryfont
 {
-margin:0;
-padding:0;
-box-sizing: border-box;
+			font-family: "Archery", Arial, Helvetica, sans-serif;
 }
 
-html,
-body
+.Montserrat
 {
-position:relative;
-height:100vh;
-width:100%;
+			font-family: "Montserrat-regular", Arial, Helvetica, sans-serif;
 }
 
-body {
 
-}
-
-#viewcontainer
+H1,H2,
+.innerpadding,
+.MontserratSB,
+.text
 {
-	min-height:100vh;
-	width:100%;
+			font-family: "Montserrat-semibold", Arial, Helvetica, sans-serif;
 }
-
-#header
-{
-}
-
-#footer
-{
-}
-
-.outermargin
-{
-	max-width:1400px;
-	width:96%;
-	margin:0px auto;
-}
-
-/* Theme Default Styles */
-#logobox h1,
-#logobox h2
-{
-	font-size:90%;
-}
-
-/* variable (style.css) */
-#logobox .innerpadding,
-#loopcontainer .innerpadding,
-.widget .innerpadding,
-.column .innerpadding,
-nav ul > li > a,
-#site-titlebox .innerpadding
-{
-	padding:0px 5px;
-}
-
-.clr
-{
-clear:both;
-height:0;
-line-height:0;
-}
-
-/* WP Default Styles */
-
-.screen-reader-text
-{
-}
-.alignright
-{}
-.alignleft
-{}
-.aligncenter
-{}
-.bypostauthor
-{}
-.wp-caption
-{}
-.wp-caption-text
-{}
-.gallery-caption
-{}
-.sticky
-{}

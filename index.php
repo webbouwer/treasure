@@ -1,27 +1,10 @@
 <?php
-/* Protago
- * index.php
- * default theme file
- */
+/* index.php */
 
-// $options = get_option( 'protago_settings' );
+get_header();
 
-get_template_part('html/htmlhead');
+get_template_part('views/parts/loop');
 
-echo '<body '; body_class(); echo '>';
+get_template_part('views/parts/sidebar');
 
-wp_body_open();
-
-echo '<div id="viewcontainer">';
-
-get_template_part('html/header');
-
-get_template_part('html/content');
-
-get_template_part('html/footer');
-
-echo '</div>';
-
-wp_footer();
-
-echo '</body></html>';
+get_footer();

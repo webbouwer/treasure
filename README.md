@@ -1,2 +1,3 @@
-# treasure
-Wordpress Special Collection Theme
+# Treasure (Collections)
+
+### Wordpress theme for artifact collections
