@@ -441,6 +441,44 @@ blauw : #00A3E8;
 }
 
 
+#loopcontainer .post-artifact .item-icons .but-foto
+{
+  order: 1;
+}
+#loopcontainer .post-artifact .item-icons .but-audio
+{
+  order: 2;
+}
+#loopcontainer .post-artifact .item-icons .but-gedicht
+{
+  order: 3;
+}
+#loopcontainer .post-artifact .item-icons .but-sculptuur
+{
+  order: 4;
+}
+#loopcontainer .post-artifact .item-icons .but-video
+{
+  order: 5;
+}
+#loopcontainer .post-artifact .item-icons .but-schilderij
+{
+  order: 6;
+}
+#loopcontainer .post-artifact .item-icons .but-verhaal
+{
+  order: 7;
+}
+#loopcontainer .post-artifact .item-icons .but-pers
+{
+  order: 8;
+}
+#loopcontainer .post-artifact .item-icons .but-overige
+{
+  order: 9;
+}
+
+
 /* toggle grid / list */
 #display-toggle
 {
@@ -588,6 +626,9 @@ blauw : #00A3E8;
 #loopcontainer.grid-view .item-icons ul
 {
   padding:0 !important;
+  display:flex;
+  display: -webkit-flex;
+  justify-content: center;
 }
 #loopcontainer.grid-view .item-icons ul li
 {
@@ -714,9 +755,12 @@ flex:4;
 {
   color:#000000;
 }
+
 #loopcontainer.list-view .item-icons ul
 {
 height:56px;
+display:flex;
+display: -webkit-flex;
 /* transform: scale(0.7); */
 }
 #loopcontainer.list-view .item-icons ul li
